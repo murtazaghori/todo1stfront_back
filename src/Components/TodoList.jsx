@@ -17,7 +17,7 @@ function TodoList({ todo, setTodos }) {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/api/todos/${todo.id}`, {
+      const res = await fetch(`https://todo1stbakend-el3i-git-master-murtaza-ghoris-projects.vercel.app/api/todos/${todo.id}}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title: editInp }),
@@ -38,7 +38,7 @@ function TodoList({ todo, setTodos }) {
 
   const handleDelete = async () => {
     try {
-      await fetch(`http://localhost:5000/api/todos/${todo.id}`, {
+      await fetch(`https://todo1stbakend-el3i-git-master-murtaza-ghoris-projects.vercel.app/api/todos/${todo.id}`, {
         method: 'DELETE',
       });
 

@@ -7,7 +7,7 @@ function Addtodoes({ todoInp, setTodoInp, setTodos }) {
 
  
   useEffect(() => {
-    fetch('http://localhost:5000/api/todos')
+    fetch('https://todo1stbakend-el3i-git-master-murtaza-ghoris-projects.vercel.app/api/todos')
       .then(res => res.json())
       .then(data => {
         const formatted = data.map(todo => ({
@@ -26,7 +26,7 @@ function Addtodoes({ todoInp, setTodoInp, setTodos }) {
       return;
     }
 
-    const res = await fetch('http://localhost:5000/api/todos', {
+    const res = await fetch('https://todo1stbakend-el3i-git-master-murtaza-ghoris-projects.vercel.app/api/todos', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title: todoInp }),
